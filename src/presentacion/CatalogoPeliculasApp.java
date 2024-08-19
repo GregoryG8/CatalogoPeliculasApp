@@ -29,6 +29,9 @@ public class CatalogoPeliculasApp {
                 1.Agregar pelicula
                 2.Listar peliculas
                 3.Buscar pelicula
+                4.Salir
+                
+                Elige una opcion: 
                 """);
     }
 
@@ -40,19 +43,19 @@ public class CatalogoPeliculasApp {
                 System.out.println("Introduzca el titulo: ");
                 var nombrePelicula = console.nextLine();
                 servicioPeliculas.agregarPelicula(new Pelicula(nombrePelicula));
-
+                break;
             case 2:
                 servicioPeliculas.listarPeliculas();
-
+                break;
             case 3:
                 System.out.println("Introduzca el titulo a buscar: ");
                 var buscar = console.nextLine();
                 servicioPeliculas.buscarPelicula(new Pelicula(buscar));
-
+                break;
             case 4:
                 System.out.println("Hasta luego.");
                 salir = true;
-
+                break;
             default:
                 System.out.println("Opcion no reconocida: " + opcion);
         }
