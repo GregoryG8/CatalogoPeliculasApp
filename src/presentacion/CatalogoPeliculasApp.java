@@ -15,7 +15,7 @@ public class CatalogoPeliculasApp {
         while (!salir){
             try {
                 mostrarMenu();
-                salir = ejecutarOpciones(console, servicioPeliculas)
+                salir = ejecutarOpciones(console, servicioPeliculas);
             }catch (Exception e){
                 System.out.println("Ocurrio un error: " + e.getMessage());
             }
